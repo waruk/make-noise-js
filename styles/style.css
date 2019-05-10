@@ -2,9 +2,30 @@
     padding: 20px;
     font-family: Verdana;
 }
-div {
-    padding: 15px;
+
+.sound {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
+.sound div {
+    padding: 5px 10px;
+}
+
+/*.audio-controls img {
+    width: 20px;
+    height: 20px;
+}*/
+
+.play-everyXminutes {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.play-intervals {
+    display: none;
+}
+
 #player-log {
     font-family: 'Lucida Sans Unicode';
     font-size: 12px;

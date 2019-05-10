@@ -11,7 +11,13 @@
 - stop/start clients
 
 # Client
-- display list of available audio files
 - play audio using howler.js?
 - send logging information to server
-- port all the features from WPF app
+- each noise interval has it's own frequency: 
+  - 10:00-13:20 every min: 4 max: 13 min 
+  - 23:00-06:00 every min: 12 max: 48 min
+- class Scheduler (scheduleNextMediaPlay, )
+- short sounds should be repeatable x times with a random number of seconds between repeats.
+
+
+
