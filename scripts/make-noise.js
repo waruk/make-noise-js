@@ -1,7 +1,7 @@
-﻿const minIntervalValue = 5;
-const maxIntervalValue = 45;
+﻿let minIntervalValue = 5;
+let maxIntervalValue = 45;
 const maxLengthToPlay = 60;
-const mediaFile = "sounds/starship.mp3"
+let mediaFile = "sounds/starship.mp3"
 
 let playIntervalId;
 let playLengthId;
@@ -30,8 +30,6 @@ function logInfo(message, important) {
 function readConfiguration() {
     minIntervalValue = parseInt(document.getElementById("min-value").value);
     maxIntervalValue = parseInt(document.getElementById("max-value").value);
-    maxLengthToPlay = parseInt(document.getElementById("max-length").value);
-    mediaFile = document.getElementById("media-file").value;
     if (Number.isInteger(minIntervalValue) && Number.isInteger(maxIntervalValue) && Number.isInteger(maxLengthToPlay)) {
         return true;
     }
