@@ -16,6 +16,10 @@ Have feature parity with WPF app
   - 23:00-06:00 every min: 12 max: 48 min
 - class Scheduler (scheduleNextMediaPlay, )
 - short sounds should be repeatable x times with a random number of seconds between repeats.
+- Configuration section
+  - manage audio files (upload/delete)
+  - define noise intervals for each file
+  - display the status of all running clients (option to start/stop them)
 
 
 
