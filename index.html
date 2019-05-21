@@ -6,17 +6,25 @@
     <title>Make me noise - the JS version</title>
 </head>
 <body>
-    <div class="sound-list">
-        <div class="sound">
-            <div class="audio-controls">
-                <img id="play-button" src="images/play-button.png" />
-                <img id="stop-button" src="images/stop-button.png" />
+    <div class="audio-controls">
+        <img id="play-button" src="images/play-button.png" />
+        <img id="stop-button" src="images/stop-button.png" />
+    </div>
+    <div class="noise-intervals">
+        <div class="interval">
+            <div>
+                <label for="from">From:</label>
+                <input type="time" id="from" name="from" value="09:00">
+            </div>
+            <div>
+                <label for="to">To:</label>
+                <input type="time" id="to" name="to" value="11:30">
             </div>
             <div class="file-name">
                 <span>icebraker.mp3</span>
             </div>
             <div class="play-everyXminutes">
-                <span>Repeat:</span>
+                <span>Frequency:</span>
                 <div>
                     <label for="min-value">Min:</label>
                     <input type="number" id="min-value" name="min-value" value="3">
@@ -25,14 +33,6 @@
                     <label for="max-value">Max:</label>
                     <input type="number" id="max-value" name="max-value" value="6">
                 </div>
-            </div>
-            <div class="play-intervals">
-                <p>Play intervals</p>
-                <!-- list of defined intervals -->
-                <ul>
-                    <li>09:30 - 18:45</li>
-                    <li>19:30 - 22:00</li>
-                </ul>
             </div>
         </div>
     </div>
@@ -48,7 +48,8 @@
     </div>
 
     <!-- DOM is loaded by now -->
+    <script src="scripts/scheduler.js"></script>
     <script src="scripts/logging.js"></script>
-    <script src="scripts/make-noise.js"></script>
+    <script src="scripts/app.js"></script>
 </body>
 </html>

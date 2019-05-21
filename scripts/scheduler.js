@@ -16,7 +16,11 @@ class Scheduler {
     stopScheduling() {
         // whatever
     }
-}
 
-let scheduler = new Scheduler();
-console.log(scheduler.getNextPlayTime());
+    isInsideNoiseInterval() {
+        logInfo("timer elapsed.");
+    }
+
+    scheduleNextPlay() {
+    }
+}
