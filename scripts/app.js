@@ -6,10 +6,10 @@ noiseIntervals.push({
     from: "08:00",
     to: "11:20",
     frequency: {
-        min: 3,
+        min: 4,
         max: 25
     },
-    audioFile: "sounds/train.mp3"
+    audioFile: "sounds/icebraker.mp3"
 });
 noiseIntervals.push({
     from: "20:10",
