@@ -9,7 +9,6 @@ Have feature parity with WPF app
 - sends stop command to client (SignalR?)
 
 # Client
-- play audio using howler.js?
 - send logging information to server
 - ?? short sounds should be repeatable x times with a random number of seconds between repeats.
 - Configuration section
