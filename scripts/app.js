@@ -23,13 +23,14 @@ function logInfo(message, important = false) {
 function playButtonClick() {
     // check every 1 minute if we are inside a noise interval
     // and, if true, schedule next audio file play
+    checkNoiseIntervalId = window.setInterval(startMakingNoise, 1000 * 15); 
     logInfo("--- Started ---");
-    checkNoiseIntervalId = window.setInterval(startMakingNoise, 1000 * 60); 
 }
 
 function stopButtonClick() {
-    logInfo("--- Stopped ---");
     window.clearInterval(checkNoiseIntervalId);
+    audioPlayer.stop();
+    logInfo("--- Stopped ---");
 }
 
 document.getElementById("play-button").addEventListener("click", playButtonClick);
