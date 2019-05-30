@@ -2,7 +2,7 @@ class AudioPlayer {
     constructor (mediaElement) {
         this.mediaElement = mediaElement;
         this.isPlaying = false;
-        this.mediaElement.addEventListener("ended", this.mediaPlayEnded.bind(this));
+        this.mediaElement.addEventListener("ended", this.audioTrackEnded.bind(this));
     }
 
     async play (audioFile) {
@@ -25,9 +25,9 @@ class AudioPlayer {
         logInfo ("Player stopped.");
     }
 
-    mediaPlayEnded () {
+    audioTrackEnded () {
         this.isPlaying = false;
-        logInfo("Playback ended.");
+        logInfo("Track ended.");
         //scheduleNextPlay();
     }
 }
