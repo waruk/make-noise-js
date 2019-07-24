@@ -1,9 +1,9 @@
+import logInfo from './modules/page-logger.js';
+import Scheduler from "./modules/scheduler.js";
+import AudioPlayer from "./modules/audio-player.js";
+
 (function(){
     "use strict";
-
-    import logInfo from './modules/page-logger.js';
-    import Scheduler from "./modules/scheduler.js";
-    import AudioPlayer from "./modules/audio-player.js";
 
     let checkNoiseIntervalId;
     let scheduler = new Scheduler();
