@@ -14,7 +14,7 @@ class Logger {
             hour: 'numeric', minute: 'numeric', second: 'numeric'
         }
         newLine.innerText = new Intl.DateTimeFormat('ro-RO', dateFormat).format(currentDate) + " : " + message;
-        this.logElement.insertBefore(newLine, logElement.firstChild);
+        this.logElement.insertBefore(newLine, this.logElement.firstChild);
     
         console.log(newLine.innerText);
     }
