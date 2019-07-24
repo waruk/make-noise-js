@@ -1,3 +1,4 @@
+Use a generated sine wave as one of the audio sources.  
 Have feature parity with WPF app
 
 # ControlCenter: a REST API (.net core)
