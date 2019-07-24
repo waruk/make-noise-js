@@ -1,14 +1,14 @@
-import {logInfo} from './modules/page-logger.js';
-import {Scheduler} from "./modules/scheduler.js";
-import {AudioPlayer} from "./modules/audio-player.js";
+import {logInfo} from "./modules/page-logger.js";
+//import {Scheduler} from "./modules/scheduler.js";
+//import {AudioPlayer} from "./modules/audio-player.js";
 
 (function(){
     // modules use strict mode automatically.
     "use strict";
 
     let checkNoiseIntervalId;
-    let scheduler = new Scheduler();
-    let audioPlayer = new AudioPlayer(document.getElementById("audio-elem"));
+    //let scheduler = new Scheduler();
+    //let audioPlayer = new AudioPlayer(document.getElementById("audio-elem"));
     let logTargetElement = document.getElementById("player-log");
 
     function playButtonClick() {
@@ -20,7 +20,7 @@ import {AudioPlayer} from "./modules/audio-player.js";
 
     function stopButtonClick() {
         window.clearInterval(checkNoiseIntervalId);
-        audioPlayer.stop();
+        //audioPlayer.stop();
         logInfo(logTargetElement, "--- Stopped ---");
     }
 
@@ -30,11 +30,11 @@ import {AudioPlayer} from "./modules/audio-player.js";
     function startMakingNoise() {
         logInfo(logTargetElement, "timer elapsed.");
         
-        if (scheduler.isInsideNoiseInterval()) {
-            audioPlayer.play();
-        }
-        else {
-            audioPlayer.stop();
-        }
+        // if (scheduler.isInsideNoiseInterval()) {
+        //     audioPlayer.play();
+        // }
+        // else {
+        //     audioPlayer.stop();
+        // }
     }
 })();
