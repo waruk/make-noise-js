@@ -26,9 +26,6 @@ class Scheduler {
     // class methods defined here are moved inside the prototype,
     // except methods defined as arrow functions
     // class properties remain as instance fields.
-    getNextPlayTime() {
-        return "the next play time: a date type.";
-    }
 
     stopScheduling() {
         // whatever
@@ -45,7 +42,15 @@ class Scheduler {
         return true;
     }
 
-    scheduleNextPlay() {
+    scheduleNextPlay(min, max) {
+        let min = Math.ceil(min);
+        let max = Math.floor(max);
+        let nextPlayTime = Math.floor(Math.random() * (max - min + 1)) + min; // The maximum is inclusive and the minimum is inclusive 
+
+        console.log("Next play in: " + nextPlayTime + " minutes");
+        let playIntervalId = window.setTimeout(playSound, nextPlayTime * 60000); // time in seconds
+
+        return nextPlayTime;
     }
 }
 

@@ -26,6 +26,8 @@ import { AudioPlayer } from "./modules/audio-player.js";
 
     function startMakingNoise() {
         logger.logInfo("timer elapsed.");
+        // create a scheduler object with just one noise interval from user input
+        // use a sine wave instead of a sound
         
         if (scheduler.isInsideNoiseInterval()) {
             audioPlayer.play();
@@ -34,4 +36,9 @@ import { AudioPlayer } from "./modules/audio-player.js";
             audioPlayer.stop();
         }
     }
+
+/*     function readConfiguration() {
+        minIntervalValue = parseInt(document.getElementById("min-value").value);
+        maxIntervalValue = parseInt(document.getElementById("max-value").value);
+    } */
 })();
