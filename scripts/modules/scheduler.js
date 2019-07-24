@@ -37,10 +37,10 @@ class Scheduler {
     isInsideNoiseInterval() {
         let currentTime = Date.now();
 
-        for (const interval of this.noiseIntervals) {
+        // for (const interval of this.noiseIntervals) {
             
-            console.log(interval.from);
-        }
+        //     console.log(interval.from);
+        // }
 
         return true;
     }

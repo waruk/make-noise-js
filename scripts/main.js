@@ -1,11 +1,11 @@
 import { Logger } from "./modules/logger.js";
-//import {Scheduler} from "./modules/scheduler.js";
-//import {AudioPlayer} from "./modules/audio-player.js";
+import { Scheduler } from "./modules/scheduler.js";
+//import { AudioPlayer } from "./modules/audio-player.js";
 
 (function() {
     let checkNoiseIntervalId;
     let logger = new Logger(document.getElementById("player-log"));
-    //let scheduler = new Scheduler();
+    let scheduler = new Scheduler();
     //let audioPlayer = new AudioPlayer(document.getElementById("audio-elem"));
 
     function playButtonClick() {
@@ -27,11 +27,12 @@ import { Logger } from "./modules/logger.js";
     function startMakingNoise() {
         logger.logInfo("timer elapsed.");
         
-        // if (scheduler.isInsideNoiseInterval()) {
-        //     audioPlayer.play();
-        // }
+        if (scheduler.isInsideNoiseInterval()) {
+            //audioPlayer.play();
+            logger.logInfo("inside noise interval");
+        }
         // else {
         //     audioPlayer.stop();
-        //}
+        // }
     }
 })();
