@@ -1,4 +1,3 @@
-# First
 Have feature parity with WPF app
 
 # ControlCenter: a REST API (.net core)
