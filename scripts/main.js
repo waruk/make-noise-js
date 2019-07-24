@@ -1,12 +1,12 @@
 import { Logger } from "./modules/logger.js";
 import { Scheduler } from "./modules/scheduler.js";
-//import { AudioPlayer } from "./modules/audio-player.js";
+import { AudioPlayer } from "./modules/audio-player.js";
 
 (function() {
     let checkNoiseIntervalId;
     let logger = new Logger(document.getElementById("player-log"));
     let scheduler = new Scheduler();
-    //let audioPlayer = new AudioPlayer(document.getElementById("audio-elem"));
+    let audioPlayer = new AudioPlayer(document.getElementById("audio-elem"));
 
     function playButtonClick() {
         // check every 1 minute if we are inside a noise interval
@@ -17,7 +17,7 @@ import { Scheduler } from "./modules/scheduler.js";
 
     function stopButtonClick() {
         window.clearInterval(checkNoiseIntervalId);
-        //audioPlayer.stop();
+        audioPlayer.stop();
         logger.logInfo("--- Stopped ---");
     }
 
@@ -28,11 +28,10 @@ import { Scheduler } from "./modules/scheduler.js";
         logger.logInfo("timer elapsed.");
         
         if (scheduler.isInsideNoiseInterval()) {
-            //audioPlayer.play();
-            logger.logInfo("inside noise interval");
+            audioPlayer.play();
         }
-        // else {
-        //     audioPlayer.stop();
-        // }
+        else {
+            audioPlayer.stop();
+        }
     }
 })();

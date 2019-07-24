@@ -11,9 +11,9 @@ class AudioPlayer {
             try {
                 await this.mediaElement.play();
                 this.isPlaying = true;
-                logInfo ("Player started.");
+                console.log ("Player started.");
             } catch (err) {
-                logInfo ("Can not play the file.");
+                console.log ("Can not play the file.");
             }
         }
     }
@@ -22,12 +22,12 @@ class AudioPlayer {
         this.mediaElement.pause();
         this.mediaElement.currentTime = 0;
         this.isPlaying = false;
-        logInfo ("Player stopped.");
+        console.log ("Player stopped.");
     }
 
     audioTrackEnded () {
         this.isPlaying = false;
-        logInfo("Track ended.");
+        console.log("Track ended.");
         //scheduleNextPlay();
     }
 }
