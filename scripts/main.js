@@ -3,9 +3,6 @@ import {logInfo} from "./modules/page-logger.js";
 //import {AudioPlayer} from "./modules/audio-player.js";
 
 (function(){
-    // modules use strict mode automatically.
-    "use strict";
-
     let checkNoiseIntervalId;
     //let scheduler = new Scheduler();
     //let audioPlayer = new AudioPlayer(document.getElementById("audio-elem"));
