@@ -3,7 +3,7 @@
 // then eliminate the parameter "logElement" of logInfo function
 
 function logInfo(logElement, message, important = false) {
-    newLine = document.createElement("div");
+    let newLine = document.createElement("div");
     if (important)
         newLine.classList.add("bold-red-text");
 
