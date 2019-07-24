@@ -7,8 +7,8 @@ function logInfo(logElement, message, important = false) {
     if (important)
         newLine.classList.add("bold-red-text");
 
-    currentDate = Date.now();
-    dateFormat = {
+    let currentDate = Date.now();
+    let dateFormat = {
         year: 'numeric', month: 'numeric', day: 'numeric',
         hour: 'numeric', minute: 'numeric', second: 'numeric'
     }
