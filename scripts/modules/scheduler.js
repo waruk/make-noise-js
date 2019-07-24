@@ -48,3 +48,5 @@ class Scheduler {
     scheduleNextPlay() {
     }
 }
+
+export {Scheduler};

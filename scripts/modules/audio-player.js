@@ -31,3 +31,5 @@ class AudioPlayer {
         //scheduleNextPlay();
     }
 }
+
+export {AudioPlayer};

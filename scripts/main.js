@@ -1,46 +1,33 @@
 (function(){
     "use strict";
 
+    import logInfo from './modules/page-logger.js';
+    import Scheduler from "./modules/scheduler.js";
+    import AudioPlayer from "./modules/audio-player.js";
+
     let checkNoiseIntervalId;
     let scheduler = new Scheduler();
     let audioPlayer = new AudioPlayer(document.getElementById("audio-elem"));
-
-    function logInfo(message, important = false) {
-
-        logElement = document.getElementById("player-log");
-        newLine = document.createElement("div");
-        if (important)
-            newLine.classList.add("bold-red-text");
-
-        currentDate = Date.now();
-        dateFormat = {
-            year: 'numeric', month: 'numeric', day: 'numeric',
-            hour: 'numeric', minute: 'numeric', second: 'numeric'
-        }
-        newLine.innerText = new Intl.DateTimeFormat('ro-RO', dateFormat).format(currentDate) + " : " + message;
-        logElement.insertBefore(newLine, logElement.firstChild);
-
-        console.log(newLine.innerText);
-    }
+    let logTargetElement = document.getElementById("player-log");
 
     function playButtonClick() {
         // check every 1 minute if we are inside a noise interval
         // and, if true, schedule next audio file play
         checkNoiseIntervalId = window.setInterval(startMakingNoise, 1000 * 15); 
-        logInfo("--- Started ---");
+        logInfo(logTargetElement, "--- Started ---");
     }
 
     function stopButtonClick() {
         window.clearInterval(checkNoiseIntervalId);
         audioPlayer.stop();
-        logInfo("--- Stopped ---");
+        logInfo(logTargetElement, "--- Stopped ---");
     }
 
     document.getElementById("play-button").addEventListener("click", playButtonClick);
     document.getElementById("stop-button").addEventListener("click", stopButtonClick);
 
     function startMakingNoise() {
-        logInfo("timer elapsed.");
+        logInfo(logTargetElement, "timer elapsed.");
         
         if (scheduler.isInsideNoiseInterval()) {
             audioPlayer.play();
