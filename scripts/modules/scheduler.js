@@ -42,9 +42,9 @@ class Scheduler {
         return true;
     }
 
-    scheduleNextPlay(min, max) {
-        let min = Math.ceil(min);
-        let max = Math.floor(max);
+    scheduleNextPlay(minimum, maximum) {
+        let min = Math.ceil(minimum);
+        let max = Math.floor(maximum);
         let nextPlayTime = Math.floor(Math.random() * (max - min + 1)) + min; // The maximum is inclusive and the minimum is inclusive 
 
         console.log("Next play in: " + nextPlayTime + " minutes");
