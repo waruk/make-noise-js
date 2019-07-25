@@ -3,6 +3,10 @@
     font-family: Verdana;
 }
 
+div {
+    margin: 0.8em;
+}
+
 .interval {
     display: flex;
     justify-content: flex-start;
