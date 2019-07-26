@@ -7,11 +7,26 @@ div {
     margin: 0.8em;
 }
 
+.noise-intervals {
+    border: solid;
+    border-width: 3px;
+    border-radius: 10px;
+}
+
 .interval {
     display: flex;
+    flex-wrap: wrap;
     justify-content: flex-start;
     align-items: center;
 }
+
+.active-interval {
+    background-color: rgb(139, 247, 89);
+}
+.inactive-interval {
+    background-color: rgb(218, 216, 216);
+}
+
 .sound div {
     padding: 5px 10px;
 }
