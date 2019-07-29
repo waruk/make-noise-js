@@ -1,8 +1,8 @@
 # Client
+- [ ] short sounds should repeat for 5 mins, posibly with a random no of seconds betweet each play.
 - [ ] Use a generated sine wave as one of the audio sources.  
 - [ ] Have feature parity with WPF app
 - [ ] Save noise intervals in one of the browser storage options (cookie, IndexDB, etc.)
-- [ ] ?? short sounds should be repeatable x times with a random number of seconds between repeats.  
 
 **Needs server API:**  
 - [ ] send current status to server / display clients status
